@@ -45,6 +45,12 @@ writeNotes(note) {
     return this.readNotes().then((existingNotes)=>[...existingNotes, newNote]).then((newNoteArr)=> this.write(newNoteArr))
 
       }
+
+    deleteNotes(id) {
+        return this.readNotes().then((existingNotes) => existingNotes.filter((note)=>note.id !== id)).then((newNoteArr)=> this.write(newNoteArr))
+    }
+
+    
 }
 
 
