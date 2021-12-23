@@ -1,29 +1,21 @@
 const express = require('express');
-const html = require('./routes/html.js');
-const api = require('./routes/api.js');
+const apiRoutes = require('./routes/api');
+const htmlRoutes = require('./routes/html');
 
-const PORT = 3001;
-
+// Initialize the app and create a port
 const app = express();
+const PORT = process.env.PORT || 3001;
 
+// Set up body parsing, static, and route middleware
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static('public'));
+app.use('/api', apiRoutes);
+app.use('/', htmlRoutes);
 
-
-app.use('/', html);
-app.use('/api', api);
-
-app.listen(PORT, () =>
-    console.log(`App listening at http://localhost:${PORT}`)
-);
+// Start the server on the port
+app.listen(PORT, () => console.log(`Listening on PORT: ${PORT}`));
 // The application should have a db.json file on the back end that will be used to store and retrieve notes using the fs module.
-
-// The following HTML routes should be created:
-
-
-
-// The following API routes should be created:
 
 
 
