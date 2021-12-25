@@ -9,7 +9,7 @@
   * This application uses Express.js to connect the frontend with the backend.
 
 ## Deployed application
-To access this application, follow the url below:
+To access this application, follow this url:
 https://rocky-sierra-86737.herokuapp.com/
 
 ## Screenshot of application
