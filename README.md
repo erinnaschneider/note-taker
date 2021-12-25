@@ -6,6 +6,7 @@
       * Delete a note
   * When you hit the "Get started" button on the home page, it should take you page that houses all of the notes.
   * You must add text to both the _Note Title_ and _Note Text_ fields in order to save a new note.
+  * This application uses Express.js to connect the frontend with the backend.
 
 ## Deployed application
 To access this application, follow the url below:
